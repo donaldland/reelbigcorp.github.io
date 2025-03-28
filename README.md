@@ -1,4 +1,4 @@
-# Reel Big Corporation Website
+# Reel Big Corp Website
 
 A retro-styled website showcasing Reel Big Corporation's portfolio, featuring a unique blend of classic film aesthetics and modern digital design.
 
@@ -60,7 +60,7 @@ ReelBigCorp/
 
 This website is deployed using GitHub Pages and can be accessed at:
 - Main site: https://reelbigcorp.com
-- Photo gallery: https://reelbigcorp.com/selected-photos.html
+
 
 ## Custom Domain Setup
 

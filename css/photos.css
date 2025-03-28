@@ -1,0 +1,259 @@
+/* =========== Photos Gallery Page Styles =========== */
+
+/* Ensure navbar is centered */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.logo {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.main-nav {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .main-nav {
+        width: 100%;
+    }
+}
+
+/* Logo ASCII art improvement */
+.logo-ascii {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #00ffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+    white-space: pre;
+}
+
+/* Gallery styles */
+.photos-gallery-section {
+    margin: 40px auto;
+    max-width: 1200px;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery-category {
+    font-family: 'VT323', monospace;
+    color: #00ffff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: 50px 0 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-category::before,
+.gallery-category::after {
+    content: '[ ]';
+    color: #00ffff;
+    font-size: 1.6rem;
+    position: relative;
+    top: -2px;
+}
+
+.gallery-category::before {
+    margin-right: 15px;
+}
+
+.gallery-category::after {
+    margin-left: 15px;
+}
+
+.gallery-intro {
+    color: #cccccc;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gallery-nav {
+    margin-top: 10px;
+}
+
+.small-button {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+}
+
+/* Gallery grid with aspect ratio handling */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    margin: 30px auto;
+    max-width: 1400px;
+}
+
+@media (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1300px;
+    }
+}
+
+/* Photo aspect ratio handling */
+.photo-item {
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-item:hover {
+    transform: translateY(-5px);
+}
+
+.photo-frame {
+    background-color: #000000;
+    border: 2px solid #00ffff;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.retro-photo {
+    width: 100%;
+    height: 280px;
+    display: block;
+    border: 1px solid #333333;
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.portrait-photo .retro-photo {
+    object-position: top;
+}
+
+.photo-frame:hover .retro-photo {
+    opacity: 0.8;
+}
+
+.photo-caption {
+    padding: 10px 5px;
+    background-color: #000040;
+    color: #00ffff;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    border-top: 1px dashed #00ffff;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-message {
+    margin: 40px auto;
+    background-color: #000040;
+    border: 2px solid #00ffff;
+    padding: 20px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.terminal-text {
+    font-family: 'VT323', monospace;
+    color: #00ffff;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* Expand photo on hover for larger screens */
+@media (min-width: 992px) {
+    .photo-item:hover {
+        transform: scale(1.02) translateY(-5px);
+        z-index: 10;
+    }
+    
+    .photo-frame:hover {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+}
+
+/* Additional animations */
+.retro-photo {
+    transition: all 0.3s ease;
+}
+
+.photo-caption {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-caption::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #00ffff;
+    transition: width 0.5s ease;
+}
+
+.photo-frame:hover .photo-caption::after {
+    width: 100%;
+} 

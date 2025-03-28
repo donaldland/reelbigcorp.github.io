@@ -1,1 +1,521 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reel Big Corporation | Film Production</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Retro fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="marquee">
+            <marquee behavior="scroll" direction="left">Welcome to Reel Big Corporation! Bridging the gap between retro aesthetics and modern filmmaking since 2024!</marquee>
+        </div>
+        
+        <div class="logo-container">
+            <div class="logo">
+                <a href="#home">
+                    <span class="logo-text">RBC</span>
+                </a>
+            </div>
+            <div class="tagline">
+                <h1>Reel Big Corporation</h1>
+                <p>Bridging the gap between retro aesthetics and modern filmmaking</p>
+            </div>
+        </div>
+        
+        <div class="visitor-counter">
+            <p>You are visitor number: <span id="visitor-count">1337</span></p>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Mobile Navigation Toggle -->
+            <div class="mobile-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home/Welcome Section -->
+        <section id="home" class="retro-welcome">
+            <div class="welcome-container">
+                <!-- Virtual PC Element -->
+                <div class="virtual-pc">
+                    <div class="pc-screen">
+                        <div class="pc-content">
+                            <div class="pc-header">
+                                <div class="pc-title">Reel Big OS v1.0</div>
+                                <div class="pc-controls">
+                                    <span class="minimize">_</span>
+                                    <span class="maximize">□</span>
+                                    <span class="close">✕</span>
+                                </div>
+                            </div>
+                            <div class="pc-desktop">
+                                <div class="welcome-window">
+                                    <div class="window-header">
+                                        <div class="window-title">WELCOME.TXT</div>
+                                        <div class="window-controls">
+                                            <span class="control">_</span>
+                                            <span class="control">□</span>
+                                            <span class="control">×</span>
+                                        </div>
+                                    </div>
+                                    <div class="window-content">
+                                        <pre class="welcome-text">
+ __        __   _                            
+ \ \      / /__| | ___ ___  _ __ ___   ___  
+  \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ 
+   \ V  V /  __/ | (_| (_) | | | | | |  __/ 
+    \_/\_/ \___|_|\___\___/|_| |_| |_|\___| 
+                                       
+    ========================================
+    |       REEL BIG CORPORATION           |
+    |       FILM PRODUCTION CO.            |
+    ========================================
+                                    </pre>
+                                        <p>Welcome to our digital studio! We create films that capture both the nostalgia of yesterday and the innovations of today.</p>
+                                        <div class="welcome-buttons">
+                                            <button class="retro-button" id="view-portfolio-btn">VIEW PORTFOLIO</button>
+                                            <button class="retro-button" id="contact-us-btn">CONTACT US</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="pc-icons">
+                                    <div class="pc-icon" data-type="portfolio">
+                                        <div class="icon-box">📁</div>
+                                        <div class="icon-text">Portfolio</div>
+                                    </div>
+                                    <div class="pc-icon" data-type="about">
+                                        <div class="icon-box">📄</div>
+                                        <div class="icon-text">About</div>
+                                    </div>
+                                    <div class="pc-icon" data-type="social">
+                                        <div class="icon-box">🌐</div>
+                                        <div class="icon-text">Social</div>
+                                    </div>
+                                    <div class="pc-icon" data-type="photos">
+                                        <div class="icon-box">📷</div>
+                                        <div class="icon-text">Photos</div>
+                                    </div>
+                                    <div class="pc-icon" data-type="snake">
+                                        <div class="icon-box">🐍</div>
+                                        <div class="icon-text">Snake</div>
+                                    </div>
+                                </div>
+                                <div class="pc-status">System Ready: Click an icon to open program</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="boot-button" class="boot-button">REBOOT SYSTEM</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dial-up Connection Simulator -->
+        <section class="content-section" id="dialup">
+            <h2>:: Dial-up Connection ::</h2>
+            <div class="dialup-container">
+                <p>Connect to us!</p>
+                <div class="dialup-animation">
+                    <pre class="ascii-art">
+   ___________
+  /           \
+ /  O     O    \
+|    [MODEM]    |
+|               |
+|_______________|
+    </pre>
+                </div>
+                <button class="retro-button" id="dialup-button">Connect to Internet</button>
+                <audio id="dialup-sound" src="https://www.soundjay.com/communication/sounds/modem-dial-1.mp3" preload="auto"></audio>
+                <p id="dialup-status">Status: Disconnected</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <h2 class="section-title">Our Portfolio</h2>
+            
+            <!-- Portfolio Content -->
+            <div class="portfolio-category">
+                <div class="portfolio-grid">
+                    <!-- Video 1: Greer's Had Enough -->
+                    <div class="portfolio-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/KZL66x6dtQY?start=1" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4>Greer's Had Enough</h4>
+                            <p>A nostalgic journey through analog aesthetics, featuring vintage film techniques and retro color grading that evokes the warmth of 8mm film.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 2: Pearl and the Oysters (Cruise Control) -->
+                    <div class="portfolio-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/CeqNKKUUkJc" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4>Pearl and the Oysters - Cruise Control</h4>
+                            <p>An experimental music video that blends VHS aesthetics with dreamy sequences, capturing the essence of late 80s and early 90s visual language.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video: Gelli Haha - Bounce House -->
+                    <div class="portfolio-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/T90Qd-NFIOc" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4>Gelli Haha - Bounce House</h4>
+                            <p>A vibrant and energetic music video showcasing our signature blend of nostalgic visual elements with contemporary production techniques.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Video 3: Pearl and the Oysters (Side Quest) -->
+                    <div class="portfolio-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/J5T3yrByOiU" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4>Pearl and the Oysters - Side Quest</h4>
+                            <p>A contemporary approach to visual storytelling with crisp cinematography and innovative digital effects while maintaining our signature artistic vision.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 4: Ginger Root Loretta -->
+                    <div class="portfolio-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/u-WTfP3WJc4" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4>Ginger Root - Loretta</h4>
+                            <p>A cutting-edge production showcasing our ability to create visually stunning content with modern techniques while incorporating subtle retro influences.</p>
+                        </div>
+                    </div>
+                
+                    <!-- Video 5: Ginger Root - Holy Hell -->
+                    <div class="portfolio-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xbYRJ-05Slw?start=1" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4>Ginger Root - Holy Hell</h4>
+                            <p>A visually striking music video that combines modern cinematography with nostalgic visual elements, creating a unique aesthetic experience.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 6: Ginger Root - Loneliness -->
+                    <div class="portfolio-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/hMCAF8tZ7ZE?start=1" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4>Ginger Root - Loneliness</h4>
+                            <p>An emotive narrative that blends retro visual techniques with contemporary storytelling, creating a powerful and resonant music video.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 7: Ginger Root - B4 -->
+                    <div class="portfolio-item">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/biGxuN1gABw?start=1" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4>Ginger Root - B4</h4>
+                            <p>A creative exploration of vintage aesthetics and modern production techniques, showcasing our unique approach to visual storytelling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Brand Work -->
+            <div class="portfolio-category">
+                <h3 class="category-title">Brand Work</h3>
+                <div class="portfolio-grid">
+                    <!-- NIKE - Taofeek -->
+                    <div class="portfolio-item">
+                        <div class="video-container">
+                            <iframe src="https://player.vimeo.com/video/842942043" 
+                                width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4>NIKE - Taofeek</h4>
+                            <p>A dynamic brand campaign that seamlessly integrates contemporary aesthetics with our distinctive visual approach.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- NIKE AMBUSH - Yoon Ahn -->
+                    <div class="portfolio-item">
+                        <div class="video-container">
+                            <iframe src="https://player.vimeo.com/video/842964965" 
+                                width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-details">
+                            <h4>NIKE AMBUSH - Yoon Ahn</h4>
+                            <p>An innovative collaboration that pushes the boundaries of brand storytelling, featuring our unique blend of retro and modern visual elements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photos Section -->
+        <section id="photos" class="photos-section">
+            <h2 class="section-title">Photos</h2>
+            <div class="photos-container">
+                <p class="photos-intro">A selection of our portrait photography from the Nike Selected By Series.</p>
+                
+                <div class="photos-grid">
+                    <div class="photo-item portrait-photo">
+                        <div class="photo-frame">
+                            <img src="images/photos/Nike Selected By Lunar New Year.jpg" alt="Nike Selected By Series" class="retro-photo">
+                            <div class="photo-caption">Nike Selected By Series</div>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item portrait-photo">
+                        <div class="photo-frame">
+                            <img src="images/photos/Nike Selected By Summer.jpeg" alt="Nike Selected By Series" class="retro-photo">
+                            <div class="photo-caption">Nike Selected By Series</div>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item portrait-photo">
+                        <div class="photo-frame">
+                            <img src="images/photos/Nike Selected By Summer_Canon Beach.jpeg" alt="Nike Selected By Series" class="retro-photo">
+                            <div class="photo-caption">Nike Selected By Series</div>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item portrait-photo">
+                        <div class="photo-frame">
+                            <img src="images/photos/Nike Selected By Summer Tennis.jpeg" alt="Nike Selected By Series" class="retro-photo">
+                            <div class="photo-caption">Nike Selected By Series</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="view-more-container">
+                    <a href="selected-photos.html" class="retro-button">VIEW MORE PHOTOS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <!-- Retro computer/film equipment illustration -->
+                    <div class="retro-equipment">
+                        <pre class="ascii-camera">
+  _______
+ /       \
+|  o   o  |
+|    ◎    |
+ \_______/
+    |  |
+  __|__|__
+ /        \
+</pre>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Our Vision</h3>
+                    <p>Founded in 2024, Reel Big Corporation emerged from a passion for both classic filmmaking techniques and modern digital innovation. We believe in combining the nostalgic charm of retro visual aesthetics with contemporary production methods to create unique, compelling content. We're proud to be a partner with <a href="https://reelbigstudio.com/" target="_blank">Reel Big Studios</a>.</p>
+                    
+                    <h3>Our Approach</h3>
+                    <p>At Reel Big Corporation, we embrace the imperfections and warmth of analog equipment while leveraging the precision and flexibility of digital technologies. This fusion allows us to craft visuals that feel both familiar and fresh, resonating with audiences across generations.</p>
+                    
+                    <h3>Our Team</h3>
+                    <p>Our diverse team consists of filmmakers, editors, and visual artists who share a deep appreciation for the history of cinema and a keen eye for modern visual trends. Each member brings unique expertise, whether it's mastering vintage equipment or pushing the boundaries of digital effects.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Section -->
+            <div class="timeline">
+                <h3>Our Journey</h3>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018</div>
+                        <div class="timeline-content">
+                            <h4>Reel Big Studios Established</h4>
+                            <p>Founding of Reel Big Studios, setting the groundwork for our creative vision in film production.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019-2024</div>
+                        <div class="timeline-content">
+                            <h4>Feature Film Production</h4>
+                            <p>Produced three feature films: "Knights of Swing," "Tomorrow," and "Forty Seven Days with Jesus."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021-2023</div>
+                        <div class="timeline-content">
+                            <h4>Nike Campaign</h4>
+                            <p>Completed a two-year long Nike campaign for "Selected By," expanding our commercial portfolio.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h4>Reel Big Corporation Founded</h4>
+                            <p>Establishment of Reel Big Corporation, merging retro aesthetics with modern filmmaking techniques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Interested in working with us? Have questions about our production process? Reach out using the form or contact us directly.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>donald@reelbigstudio.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form" action="https://formsubmit.co/donald.hien.nguyen@gmail.com" method="POST">
+                        <!-- FormSubmit configuration -->
+                        <input type="hidden" name="_subject" value="New message from ReelBigCorp website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://reelbigcorp.com/thank-you.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="divider">
+            <pre class="divider-ascii">≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈</pre>
+        </div>
+        
+        <div class="social-links">
+            <h2>:: Find Us Online ::</h2>
+            <div class="links-container">
+                <a href="mailto:donald@reelbigstudio.com" class="social-link">
+                    <pre class="social-icon-ascii">
+ _____ 
+|_____|
+ |___|
+  |_|
+   @
+</pre>
+                    Email Us
+                </a>
+                <a href="https://www.instagram.com/reelbigstudio/" target="_blank" class="social-link">
+                    <pre class="social-icon-ascii">
+ _____
+|     |
+|  □  |
+|_____|
+</pre>
+                    Instagram
+                </a>
+                <a href="https://www.youtube.com/@iamdonaldland" target="_blank" class="social-link">
+                    <pre class="social-icon-ascii">
+  ___  
+ / _ \ 
+| |_| |
+ \___/ 
+</pre>
+                    YouTube
+                </a>
+            </div>
+        </div>
+        
+        <div class="webring">
+            <p>Reel Big Corporation is proud to be part of the Filmmaker's Webring</p>
+            <div class="webring-links">
+                <a href="#">Previous</a> | 
+                <a href="#">Random</a> | 
+                <a href="#">Next</a>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Reel Big Corporation. All rights reserved.</p>
+            <p class="retro-note">This site best viewed with Netscape Navigator 4.0 at 800×600.</p>
+            <p>Partner with <a href="https://reelbigstudio.com/" target="_blank">Reel Big Studios</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

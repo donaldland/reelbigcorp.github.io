@@ -157,6 +157,11 @@ section {
     background-color: #000040;
 }
 
+.window-content p {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
 .retro-button {
     display: inline-block;
     background-color: #c0c0c0;
